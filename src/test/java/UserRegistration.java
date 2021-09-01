@@ -48,6 +48,4 @@ public class UserRegistration {
         Assert.assertEquals(true,result);
 
     }
-
-
 }
