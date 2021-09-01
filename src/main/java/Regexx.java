@@ -34,7 +34,7 @@ public class Regexx {
     }
 
     public boolean passwordValidation(String str){
-        String reg="(?=.*[A-Z]).{8,}";
+        String reg="[a-zA-Z0-9]{8,}";
         Pattern p=Pattern.compile(reg);
         return p.matcher(str).matches();
     }
