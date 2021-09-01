@@ -16,4 +16,12 @@ public class UserRegistration {
         boolean result = reg.validUserName("Musale");
         Assert.assertEquals(true,result);
     }
+
+    @Test
+    public void emailValidationWillReturnTrue(){
+        Regexx reg = new Regexx();
+        boolean result = reg.emailValidation("Nikhilmusale@gmail.com");
+        Assert.assertEquals(true,result);
+    } {
+    }
 }

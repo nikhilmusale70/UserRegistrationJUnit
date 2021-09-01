@@ -13,5 +13,13 @@ public class Regexx {
         return m.matches();
     }
 
+    public boolean emailValidation(String email){
 
+        Pattern p = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+        if (email == null)
+            return false;
+        Matcher m = p.matcher(email);
+        return m.matches();
+    }
 }
