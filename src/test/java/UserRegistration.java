@@ -1,5 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 public class UserRegistration {
 
@@ -18,10 +21,14 @@ public class UserRegistration {
     }
 
     @Test
-    public void emailValidationWillReturnTrue(){
+    public boolean emailValidationWillReturnTrue(String email){
         Regexx reg = new Regexx();
         boolean result = reg.emailValidation("Nikhilmusale@gmail.com");
-        Assert.assertEquals(true,result);
+        if (result)
+            return true;
+        else
+            return false;
+//        Assert.assertEquals(true,result);
     }
 
     @Test
@@ -49,3 +56,5 @@ public class UserRegistration {
 
     }
 }
+
+
