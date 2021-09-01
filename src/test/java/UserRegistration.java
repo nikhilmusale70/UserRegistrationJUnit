@@ -9,4 +9,11 @@ public class UserRegistration {
         boolean result = reg.validUserName("Nikhil");
         Assert.assertEquals(true,result);
     }
+
+    @Test
+    public void lastNameValidationWillReturnTrue() {
+        Regexx reg = new Regexx();
+        boolean result = reg.validUserName("Musale");
+        Assert.assertEquals(true,result);
+    }
 }
