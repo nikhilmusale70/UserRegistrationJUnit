@@ -22,4 +22,14 @@ public class Regexx {
         Matcher m = p.matcher(email);
         return m.matches();
     }
+
+    public boolean phoneValidation(String phoneNumber){
+        String regEx = "[0-9]{2}\\s[0-9]{10}";
+        Pattern p = Pattern.compile(regEx);
+
+        if (phoneNumber == null)
+            return false;
+        Matcher m = p.matcher(phoneNumber);
+        return m.matches();
+    }
 }

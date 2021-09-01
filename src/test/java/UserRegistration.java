@@ -22,6 +22,12 @@ public class UserRegistration {
         Regexx reg = new Regexx();
         boolean result = reg.emailValidation("Nikhilmusale@gmail.com");
         Assert.assertEquals(true,result);
-    } {
+    }
+
+    @Test
+    public void phoneNumberValidationWillReturnTrue() {
+        Regexx reg = new Regexx();
+        boolean result = reg.phoneValidation("91 1234567891");
+        Assert.assertEquals(true,result);
     }
 }
