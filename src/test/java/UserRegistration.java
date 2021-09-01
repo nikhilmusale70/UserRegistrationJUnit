@@ -34,7 +34,7 @@ public class UserRegistration {
     @Test
     public void passwordValidationWillReturnTrue() {
         Regexx reg = new Regexx();
-        boolean result = reg.passwordValidation("xkkK0xksss");
+        boolean result = reg.passwordValidation("xkkK@0xksss");
         Assert.assertEquals(true,result);
     }
 
