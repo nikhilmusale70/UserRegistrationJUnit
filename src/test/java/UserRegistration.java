@@ -36,6 +36,17 @@ public class UserRegistration {
         Regexx reg = new Regexx();
         boolean result = reg.passwordValidation("xkkK@0xksss");
         Assert.assertEquals(true,result);
+        boolean result2 = reg.passwordValidation("abc@yahoo.com");
+        Assert.assertEquals(true,result);
+        boolean result3 = reg.passwordValidation("abc-100@yahoo.com");
+        Assert.assertEquals(true,result);
+        boolean result4 = reg.passwordValidation("abc.100@yahoo.com");
+        Assert.assertEquals(true,result);
+        boolean result5 = reg.passwordValidation("abc111@abc.com");
+        Assert.assertEquals(true,result);
+        boolean result6 = reg.passwordValidation("abc-100@abc.net");
+        Assert.assertEquals(true,result);
+
     }
 
 
