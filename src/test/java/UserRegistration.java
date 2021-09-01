@@ -30,4 +30,13 @@ public class UserRegistration {
         boolean result = reg.phoneValidation("91 1234567891");
         Assert.assertEquals(true,result);
     }
+
+    @Test
+    public void passwordValidationWillReturnTrue() {
+        Regexx reg = new Regexx();
+        boolean result = reg.passwordValidation("xkkK8xksss");
+        Assert.assertEquals(true,result);
+    }
+
+
 }

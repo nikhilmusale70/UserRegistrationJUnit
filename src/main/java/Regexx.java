@@ -32,4 +32,10 @@ public class Regexx {
         Matcher m = p.matcher(phoneNumber);
         return m.matches();
     }
+
+    public boolean passwordValidation(String str){
+        String reg="(?=.*[A-Z]).{8,}";
+        Pattern p=Pattern.compile(reg);
+        return p.matcher(str).matches();
+    }
 }
