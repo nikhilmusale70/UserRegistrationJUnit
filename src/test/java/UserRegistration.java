@@ -1,27 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class UserRegistration {
-
-    @Test
-    public void firstNameValidationWillReturnTrue() {
-        Regexx reg = new Regexx();
-        boolean result = reg.validUserName("Nikhil");
-        Assert.assertEquals(true,result);
-    }
-
-    @Test
-    public void lastNameValidationWillReturnTrue() {
-        Regexx reg = new Regexx();
-        boolean result = reg.validUserName("Musale");
-        Assert.assertEquals(true,result);
-    }
-
-    @Test
-    public void emailValidationWillReturnTrue(){
-        Regexx reg = new Regexx();
-        boolean result = reg.emailValidation("Nikhilmusale@gmail.com");
-        Assert.assertEquals(true,result);
-    } {
-    }
 }

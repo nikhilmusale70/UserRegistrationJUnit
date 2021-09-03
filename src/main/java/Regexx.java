@@ -1,25 +1,42 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@FunctionalInterface
+interface ValidUserName {
+    boolean validCheck(String namee);
+}
+
 public class Regexx {
+    public static void main(String[] args) {
 
-    public boolean validUserName(String name){
-        String regEx = "^[A-Z][A-Z a-z]\\w{1,10}$";
-        Pattern p = Pattern.compile(regEx);
+        ValidUserName validUserName = (name) -> {
+            String regEx = "^[A-Z][A-Z a-z]\\w{1,10}$";
+            if (name.matches(regEx))
+                return true;
+            else
+                return false;
+        };
 
-        if (name==null)
-            return false;
-        Matcher m = p.matcher(name);
-        return m.matches();
+        ValidUserName validLastName = (name) -> {
+            String regEx = "^[A-Z][A-Z a-z]\\w{1,10}$";
+            if (name.matches(regEx))
+                return true;
+            else
+                return false;
+        };
+
+        ValidUserName validEmail = (email) -> {
+            String regEx = "^[A-Z][A-Z a-z]\\w{1,10}$";
+            if (email.matches(regEx))
+                return true;
+            else
+                return false;
+        };
+
+        System.out.println("Nikhil is validates as " + validUserName.validCheck("Nikhil"));
+        System.out.println("Musale is validates as " + validUserName.validCheck("Musale"));
+        System.out.println("Nikhilmusale@gmail.com is validates as " + validUserName.validCheck("Nikhilmusale70@gmail.com"));
+
     }
 
-    public boolean emailValidation(String email){
-
-        Pattern p = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
-
-        if (email == null)
-            return false;
-        Matcher m = p.matcher(email);
-        return m.matches();
-    }
 }
