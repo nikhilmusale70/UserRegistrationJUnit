@@ -4,15 +4,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-public class UserRegistration {
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-    @Test
-    public void firstNameValidationWillReturnTrue() {
-        Regexx reg = new Regexx();
-        boolean result = reg.validUserName("Nikhil");
-        Assert.assertEquals(true,result);
-    }
-
+<<<<<<< HEAD
     @Test
     public void lastNameValidationWillReturnTrue() {
         Regexx reg = new Regexx();
@@ -55,6 +50,9 @@ public class UserRegistration {
         Assert.assertEquals(true,result);
 
     }
+=======
+public class UserRegistration {
+>>>>>>> uc13
 }
 
 
